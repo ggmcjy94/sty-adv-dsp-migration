@@ -1,0 +1,3 @@
+rootProject.name = 'stdy-dsp-migration'
+include 'leagacy-dsp-application'
+
