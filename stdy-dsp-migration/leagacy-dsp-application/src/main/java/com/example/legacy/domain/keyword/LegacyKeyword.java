@@ -1,4 +1,4 @@
-package com.example.legacy.domain.adgroup;
+package com.example.legacy.domain.keyword;
 
 
 import jakarta.persistence.Entity;
@@ -13,47 +13,33 @@ import java.time.LocalDateTime;
 @Entity
 @NoArgsConstructor
 @Getter
-public class LegacyAdGroup {
-
+public class LegacyKeyword {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    private Long userId;
-    private Long campaignId;
-    private String linkUrl;
+    private String text;
 
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
     private LocalDateTime deletedAt;
 
-    private LegacyAdGroup(String name, Long userId, Long campaignId, String linkUrl, LocalDateTime createdAt) {
-        this.name = name;
-        this.userId = userId;
-        this.campaignId = campaignId;
-        this.linkUrl = linkUrl;
+    private LegacyKeyword(String name, LocalDateTime createdAt) {
+        this.text = name;
         this.createdAt = createdAt;
         this.updatedAt = createdAt;
         this.deletedAt = null;
     }
-
-    public  static LegacyAdGroup of(String name, Long userId,Long campaignId, String linkUrl) {
-        return new LegacyAdGroup(name,userId ,campaignId , linkUrl,LocalDateTime.now());
+    public  static LegacyKeyword of(String text) {
+        return new LegacyKeyword(text,LocalDateTime.now());
     }
-
     public void updateName(String newName) {
-        name = newName;
+        text = newName;
         updatedAt = LocalDateTime.now();
     }
-
 
     public void delete() {
         deletedAt = LocalDateTime.now();
     }
 
-    public void updateLinkUrl(String newLinkUrl) {
-        linkUrl = newLinkUrl;
-        updatedAt = LocalDateTime.now();
-    }
 }
