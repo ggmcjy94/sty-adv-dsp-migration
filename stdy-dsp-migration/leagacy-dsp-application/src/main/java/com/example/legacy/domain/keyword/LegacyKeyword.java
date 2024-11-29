@@ -19,24 +19,23 @@ public class LegacyKeyword {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String text;
+    private Long adGroupId;
+    private Long userId;
 
     private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
     private LocalDateTime deletedAt;
 
-    private LegacyKeyword(String name, LocalDateTime createdAt) {
+    private LegacyKeyword(String name, Long adGroupId, Long userId, LocalDateTime createdAt) {
         this.text = name;
+        this.adGroupId = adGroupId;
+        this.userId = userId;
         this.createdAt = createdAt;
-        this.updatedAt = createdAt;
         this.deletedAt = null;
     }
-    public  static LegacyKeyword of(String text) {
-        return new LegacyKeyword(text,LocalDateTime.now());
+    public  static LegacyKeyword of(String text,Long adGroupId, Long userId) {
+        return new LegacyKeyword(text,adGroupId , userId, LocalDateTime.now());
     }
-    public void updateName(String newName) {
-        text = newName;
-        updatedAt = LocalDateTime.now();
-    }
+
 
     public void delete() {
         deletedAt = LocalDateTime.now();
