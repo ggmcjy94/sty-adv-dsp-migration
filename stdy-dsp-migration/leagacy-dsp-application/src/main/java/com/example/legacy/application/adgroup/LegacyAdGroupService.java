@@ -43,7 +43,7 @@ public class LegacyAdGroupService {
     }
 
     @Transactional
-    public LegacyAdGroupResult updateBudget(Long id, String linkUrl) {
+    public LegacyAdGroupResult updateLinkUrl(Long id, String linkUrl) {
         LegacyAdGroup adGroup = findById(id);
         adGroup.updateLinkUrl(linkUrl);
         return save(adGroup);

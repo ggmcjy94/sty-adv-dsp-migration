@@ -4,9 +4,9 @@ import com.example.legacy.domain.user.LegacyUser;
 
 import java.time.LocalDateTime;
 
-public class LegacyUserDeleteEvent extends LegacyUserEvent{
+public class LegacyUserDeletedEvent extends LegacyUserEvent{
 
-    public LegacyUserDeleteEvent(LegacyUser legacyUser) {
+    public LegacyUserDeletedEvent(LegacyUser legacyUser) {
         super(legacyUser);
     }
 

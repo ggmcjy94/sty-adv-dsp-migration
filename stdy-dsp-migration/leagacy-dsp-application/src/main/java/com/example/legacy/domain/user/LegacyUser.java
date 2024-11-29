@@ -1,9 +1,9 @@
 package com.example.legacy.domain.user;
 
 
-import com.example.legacy.domain.user.event.LegacyUserCreateEvent;
-import com.example.legacy.domain.user.event.LegacyUserDeleteEvent;
-import com.example.legacy.domain.user.event.LegacyUserNameUpdateEvent;
+import com.example.legacy.domain.user.event.LegacyUserCreatedEvent;
+import com.example.legacy.domain.user.event.LegacyUserDeletedEvent;
+import com.example.legacy.domain.user.event.LegacyUserNameUpdatedEvent;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -36,7 +36,7 @@ public class LegacyUser extends AbstractAggregateRoot<LegacyUser> {
         this.createdAt = createdAt;
         this.updatedAt = createdAt;
         this.deletedAt = null;
-        registerEvent(new LegacyUserCreateEvent(this));
+        registerEvent(new LegacyUserCreatedEvent(this));
     }
 
     public  static LegacyUser of(String name) {
@@ -46,11 +46,11 @@ public class LegacyUser extends AbstractAggregateRoot<LegacyUser> {
     public void updateName(String newName) {
         name = newName;
         updatedAt = LocalDateTime.now();
-        registerEvent(new LegacyUserNameUpdateEvent(this));
+        registerEvent(new LegacyUserNameUpdatedEvent(this));
     }
 
     public void delete() {
         deletedAt = LocalDateTime.now();
-        registerEvent(new LegacyUserDeleteEvent(this));
+        registerEvent(new LegacyUserDeletedEvent(this));
     }
 }
