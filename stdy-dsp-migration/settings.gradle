@@ -1,3 +1,4 @@
 rootProject.name = 'stdy-dsp-migration'
 include 'leagacy-dsp-application'
+include 'gradual-migration-application'
 
