@@ -1,6 +1,7 @@
 package com.example.migration.gradual.domain.legacyad.keyword;
 
 
+import com.example.migration.gradual.domain.legacyad.DeletableEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,7 +15,7 @@ import java.time.LocalDateTime;
 @Entity
 @NoArgsConstructor
 @Getter
-public class LegacyKeyword {
+public class LegacyKeyword implements DeletableEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,6 +1,8 @@
-package com.example.migration.gradual.domain.legacyad.campaign;
+package com.example.migration.gradual.domain.legacyad.adgroup;
 
 
+
+import com.example.migration.gradual.domain.legacyad.DeletableEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -13,21 +15,19 @@ import java.time.LocalDateTime;
 @Entity
 @NoArgsConstructor
 @Getter
-public class LegacyCampaign {
+public class LegacyAdGroup  implements DeletableEntity {
 
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String name;
     private Long userId;
-    private Long budget;
+    private Long campaignId;
+    private String linkUrl;
 
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
     private LocalDateTime deletedAt;
-
-
 
 }
