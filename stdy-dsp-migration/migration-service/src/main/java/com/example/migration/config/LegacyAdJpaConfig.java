@@ -1,4 +1,4 @@
-package com.example.migration.gradual.config;
+package com.example.migration.config;
 
 import com.zaxxer.hikari.HikariDataSource;
 import jakarta.persistence.EntityManagerFactory;
@@ -20,7 +20,7 @@ import java.util.Properties;
 
 @Configuration
 @EnableJpaRepositories(
-        basePackages = "com.example.migration.gradual.domain.legacyad",
+        basePackages = "com.example.migration.domain.legacyad",
         entityManagerFactoryRef = "legacyAdEntityManagerFactory",
         transactionManagerRef = "legacyAdTransactionManager"
 )
@@ -50,7 +50,7 @@ public class LegacyAdJpaConfig {
     ) {
         LocalContainerEntityManagerFactoryBean factoryBean = builder
                 .dataSource(dataSource)
-                .packages("com.example.migration.gradual.domain.legacyad")
+                .packages("com.example.migration.domain.legacyad")
                 .build();
         factoryBean.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
         factoryBean.setJpaProperties(properties);

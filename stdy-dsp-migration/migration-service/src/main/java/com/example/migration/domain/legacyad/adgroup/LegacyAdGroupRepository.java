@@ -1,4 +1,4 @@
-package com.example.migration.gradual.domain.legacyad.adgroup;
+package com.example.migration.domain.legacyad.adgroup;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

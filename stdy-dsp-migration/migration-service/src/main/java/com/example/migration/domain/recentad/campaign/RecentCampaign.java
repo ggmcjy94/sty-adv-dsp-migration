@@ -1,10 +1,8 @@
-package com.example.migration.gradual.domain.recentad.campaign;
+package com.example.migration.domain.recentad.campaign;
 
 
-import com.example.migration.gradual.domain.recentad.MigratedEntity;
+import com.example.migration.domain.recentad.MigratedEntity;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

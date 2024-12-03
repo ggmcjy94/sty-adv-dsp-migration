@@ -2,7 +2,7 @@ package com.example.migration.gradual.message;
 
 
 
-import com.example.migration.gradual.domain.AggregateType;
+import com.example.migration.domain.AggregateType;
 
 import java.time.LocalDateTime;
 

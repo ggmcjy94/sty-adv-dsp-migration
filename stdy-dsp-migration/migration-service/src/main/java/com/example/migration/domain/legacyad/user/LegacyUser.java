@@ -1,14 +1,13 @@
-package com.example.migration.gradual.domain.legacyad.user;
+package com.example.migration.domain.legacyad.user;
 
 
-import com.example.migration.gradual.domain.legacyad.DeletableEntity;
+import com.example.migration.domain.legacyad.DeletableEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.springframework.data.domain.AbstractAggregateRoot;
 
 import java.time.LocalDateTime;
 

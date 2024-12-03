@@ -1,6 +1,5 @@
-package com.example.migration.gradual.domain.recentad.user;
+package com.example.migration.domain.recentad.user;
 
-import com.example.migration.gradual.domain.legacyad.user.LegacyUser;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

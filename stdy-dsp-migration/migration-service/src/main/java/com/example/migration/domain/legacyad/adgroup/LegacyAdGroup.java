@@ -1,8 +1,8 @@
-package com.example.migration.gradual.domain.legacyad.adgroup;
+package com.example.migration.domain.legacyad.adgroup;
 
 
 
-import com.example.migration.gradual.domain.legacyad.DeletableEntity;
+import com.example.migration.domain.legacyad.DeletableEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

@@ -1,4 +1,4 @@
-package com.example.migration.gradual.domain;
+package com.example.migration.domain;
 
 public enum AggregateType {
 
